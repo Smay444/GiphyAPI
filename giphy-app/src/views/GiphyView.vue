@@ -1,7 +1,7 @@
 <template>
     <div class="parent">
-        <p>Giphy View</p>
-        <giphy-item v-for="item in data" v-bind:key="item.id" v-bind:item="item"></giphy-item>
+        <p></p>
+        <giphy-item v-for="item in data" v-bind:key="item.id" v-bind:item="item" class="giphy"></giphy-item>
     </div>
 </template>
 
@@ -34,6 +34,11 @@ export default{
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        
+    }
+
+  .giphy{
+        border: 5px black solid;
     }
 </style>
 
