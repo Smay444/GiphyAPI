@@ -34,11 +34,12 @@ export default{
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        background-color: black;
         
     }
 
   .giphy{
-        border: 5px black solid;
+        border: 5px white dotted;
     }
 </style>
 
