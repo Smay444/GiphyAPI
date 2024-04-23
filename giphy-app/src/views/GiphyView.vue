@@ -1,6 +1,10 @@
 <template>
     <div class="parent">
-        <p></p>
+        <form>
+            <label for="text">Search Giphy</label>
+            <input type="text">
+            <input type="submit">
+        </form>
         <giphy-item v-for="item in data" v-bind:key="item.id" v-bind:item="item" class="giphy"></giphy-item>
     </div>
 </template>
