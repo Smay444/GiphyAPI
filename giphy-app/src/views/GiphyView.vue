@@ -1,9 +1,9 @@
 <template>
     <div class="parent">
-        <form>
+        <form @submit.prevent="searchGiphys">
             <label for="text">Search Giphy</label>
-            <input type="text">
-            <input type="submit">
+            <input type="text" v-model="searchQuery">
+            <input type="submit" value="Search">
         </form>
         <giphy-item v-for="item in data" v-bind:key="item.id" v-bind:item="item" class="giphy"></giphy-item>
     </div>
@@ -12,13 +12,15 @@
 <script>
 import giphyService from '../services/GiphyService';
 import GiphyItem from '../components/GiphyItem.vue';
+
 export default{
     components:{
         GiphyItem
     },
     data(){
         return{
-            data:[]
+            data:[],
+            searchQuery: 'dog'
         }
     },
     created(){
@@ -28,6 +30,20 @@ export default{
             this.data = response.data.data;
             
         })
+    },
+    methods: {
+        fetchGiphys(query){
+            giphyService.getGiphys(query)
+                .then(response => {
+                    this.data = response.data.data;
+                })
+                .catch(error =>{
+                    console.error(error)
+                });
+        },
+        searchGiphys(){
+            this.fetchGiphys(this.searchQuery);
+        }
     }
 }
 
