@@ -1,0 +1,22 @@
+{
+  "name": "ccb040924",
+  "version": "1.0.0",
+  "description": "giphy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smay444/GiphyAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smay444/GiphyAPI/issues"
+  },
+  "homepage": "https://github.com/Smay444/GiphyAPI#readme",
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
