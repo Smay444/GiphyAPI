@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="searchGiphys">
         <label for="text">Search For Giphy</label>
-        <input class=input type="text" v-model="searchQuery">
+        <input class=input type="text" v-model="searchQuery" placeholder="Enter Text">
         <input class=button type="submit" value="Search">
     </form>
     <div class="parent">
@@ -21,7 +21,7 @@ export default {
     data() {
         return {
             data: [],
-            searchQuery: 'dog'
+            searchQuery: ''
         }
     },
     created() {
